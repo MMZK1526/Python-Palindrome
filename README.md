@@ -1,13 +1,13 @@
 # Credits
 
-*This algorithm is discovered by Javier Cilleruelo, Florian Luca and Lewis Baxter in 2016*  
+*This algorithm is discovered by Javier Cilleruelo, Florian Luca, and Lewis Baxter in 2016*  
 I am merely implementing this algorithm; I play absolutely no parts in its discovery.
 Check out their full paper here: https://arxiv.org/abs/1602.06208.
 
 # Introduction
 
-Palindromes are a special type of number that looks exactly the same when reading from left to right or from right to left. 131, 1551, 729838927 are examples of palindromes.  
-Although most integers are not palindromes, most of them can be written as the sum of surprisingly few palindromes. For example, 37 = 33 + 4, 10420248 = 10133101 + 235532 + 51615, and  
+Palindrome is a special type of number that looks exactly the same when reading from left to right or from right to left. 131, 1551, 729838927 are examples of palindromes.  
+Although most integers are not palindromes, all can be written as the sum of surprisingly few palindromes. For example, 37 = 33 + 4, 10420248 = 10133101 + 235532 + 51615, and  
 ```
   98765432102358234659182  
 = 91110000001110000001119  
