@@ -54,6 +54,10 @@ I just finished basic testing today; if there is any issue with the program, ple
 Sorrowful T-Rex  
 2020 Dec 19  
 
+# Future Improvements (possibly)
+I may be wrong, but I believe I have read that the result is true for base 3 and base 4 as well. I'll try to adjust the algorithm to make it work for these bases as well.  
+On the other hand, there are numbers in base 2 that cannot be expressed as the some of two palindromes.  
+
 # Python-Functools (rc_func)  
 
 Contains some helper functions used in the implementation of the algorithm. 
