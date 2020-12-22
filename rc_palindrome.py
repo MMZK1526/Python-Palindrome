@@ -233,6 +233,8 @@ class Digits:
 
         typ = self.__get_type()
         if typ == DigitsType.SMALL:
+            if self.__length == 1:
+                return [self]
             if self.__length == 2:
                 if self.__digit_at(0) <= self.__digit_at(1):
                     return [
@@ -443,8 +445,8 @@ class Digits:
                 if self.__digit_at(0) == 1:
                     def partition(s: int, can_zero: bool = True):
                         if can_zero:
-                            return next(dropwhile(lambda a: a[1] >= self.__base, ((x, s - x) for x in range(s + 1))))
-                        return next(dropwhile(lambda a: a[1] >= self.__base, ((x, s - x) for x in range(1, s + 1))))
+                            return next(dropwhile(lambda a: a[1] >= self.__base, ((x0, s - x0) for x0 in range(s + 1))))
+                        return next(dropwhile(lambda a: a[1] >= self.__base, ((x0, s - x0) for x0 in range(1, s + 1))))
 
                     z = (self.__digit_at(-1) - self.__digit_at(1) + 1) % self.__base
                     if z != 0 and z != self.__base - 1:
@@ -827,7 +829,7 @@ class Digits:
         config = self.__get_config(typ)
         val = typ.value
         if self.__is_special() and not must_normal:
-            return self.__algorithm5(config)
+            return self.__algorithm5()
         if val < 10:
             if (self.__length % 2 == 0) == (val == 5 or val == 6):
                 return self.__algorithm1(config)
@@ -837,6 +839,7 @@ class Digits:
         return self.__algorithm4(config)
 
     def __algorithm1(self, configs: list):
+        # print(self.__get_type())
         m = (self.__length - 1) // 2
         p1 = configs[0]
         p2 = configs[1]
@@ -1292,7 +1295,7 @@ class Digits:
             p3[m - 2] = 0
         return [Digits(p1, self.__base), Digits(p2, self.__base), Digits(p3, self.__base)]
 
-    def __algorithm5(self, configs: list):
+    def __algorithm5(self):
         s = Digits([1, 1] + [0 for _ in range(self.__length // 2 - 1)], self.__base)
         n = self - s
         k = 1
