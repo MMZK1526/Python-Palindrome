@@ -94,24 +94,21 @@ class Digits:
         elif type(num) == str:
             if num.startswith("0b"):
                 if self.__base != 2:
-                    print(f"The base of {num} should be 2 instead of {self.__base}! I'll fix it for you.")
-                    self.__base = 2
+                    raise Exception(f"The base of {num} should be 2 instead of {self.__base}!")
                 try:
                     self.__init__(int(num[2:]), self.__base)
                 except ValueError:
                     raise Exception(invalid_msg())
             elif num.startswith("0o"):
                 if self.__base != 8:
-                    print(f"The base of {num} should be 8 instead of {self.__base}! I'll fix it for you.")
-                    self.__base = 8
+                    raise Exception(f"The base of {num} should be 8 instead of {self.__base}!")
                 try:
                     self.__init__(int(num[2:]), self.__base)
                 except ValueError:
                     raise Exception(invalid_msg())
             elif num.startswith("0x"):
                 if self.__base != 16:
-                    print(f"The base of {num} should be 16 instead of {self.__base}! I'll fix it for you.")
-                    self.__base = 16
+                    raise Exception(f"The base of {num} should be 16 instead of {self.__base}!")
                 try:
                     self.__init__(num[2:], self.__base)
                 except ValueError:
