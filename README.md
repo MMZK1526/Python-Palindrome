@@ -56,10 +56,4 @@ Sorrowful T-Rex
 
 # Future Improvements (possibly)
 I may be wrong, but I believe I have read that the result is true for base 3 and base 4 as well. I'll try to adjust the algorithm to make it work for these bases as well.  
-On the other hand, there are numbers in base 2 that cannot be expressed as the some of two palindromes.  
-
-# Python-Functools (rc_func)  
-
-Contains some helper functions used in the implementation of the algorithm. 
-They are maining functional tools, and I used them to enable a combination of imperative and functional programming in Python.  
-I have another repo specifically for this; here it only promises to contain the functional tools used in rc_palindromes and may not be updated.  
+On the other hand, there are numbers in base 2 that cannot be expressed as the some of two palindromes. 
